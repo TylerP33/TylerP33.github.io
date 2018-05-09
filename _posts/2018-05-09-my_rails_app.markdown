@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My Rails App"
-date:       2018-05-09 22:03:45 +0000
+date:       2018-05-09 18:03:46 -0400
 permalink:  my_rails_app
 ---
 
