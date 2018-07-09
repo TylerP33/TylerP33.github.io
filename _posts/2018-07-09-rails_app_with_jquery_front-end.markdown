@@ -1,0 +1,15 @@
+---
+layout: post
+title:      "Rails App with jQuery Front-End"
+date:       2018-07-09 21:54:42 +0000
+permalink:  rails_app_with_jquery_front-end
+---
+
+
+I just got done with my Javascript Portfolio Project and because we didn't get to use it, I wanted to briefly talk about the usage of `:remote => true`.  During this project, particularly when I got stuck, seeing `:remote => true` in a tutorial or in a snippet of StackOverFlow code was the definition of intellectual window shopping.  It was right there, but due to project restraints, there was no way I was going to be able to implement it.  However, I am glad that Flatiron pushes us to learn more about what's under the hood, rather than consistently relying on the readily avaliable magic that is associated with much of modern day programming.  But, seeing that I am done with my project, I figured why not write about the forbidden line of code that haunted me this past week?  After all, there will be a time when I will probably need to utilize it.
+
+In our curriculum, we learned to use AJAX, which is a powerful piece of technology that is given to us by the jQuery framework.  In rails, it is paired with the asset pipeline, which allows a user to receive all the nifty JavaScripts we wrote through the familar rails magic we are accustomed too.  Whether it be a form submission, or even a GET request through a button, AJAX serves a large purpose in the world of building dynamic, and fast web applications.  With that being said, a rails developer has to deal with the issue of going back and forth between stack to make all of this work.  As most who program know, this can feel cumbersome and not efficient.  From what I have read and played around with, this is where the beauty of  `:remote => true` comes into play.
+
+Instead of shipping our JS through the asset pipeline, we can use  `:remote => true`.  This allows rails to do some thinking for us, and allows us to stay focused on the larger task at hand.  Any default actions that we would normally have to keep track of through our request will automatically be prevented.  Also, instead of executing a piece of JS code that was ran through with the asset pipeline, rails will actually send a JS view file.  That file will then be execeuted and the AJAX call will be done at that time.  Lastly, a second JS view file will be sent when the controller action is finished, which will naturally update the page in the user's browswer.
+
+Now, this doesn't necessarilly cut down on a lot of work, but it allows for a more coheisve, and fluid work environment (at least, from what I can tell).  We will still have to make seperate js.erb files, but we will have access to instance variables within those files, as well as model associations.  We can also get access to helper views as well, and use the ever-so importnant "current_user".  So basically, it blends the two stacks, which can be very helpful!  I will have to do more research to see what is considered best practice, but as of now, my next step is to play around with `:remote => true` and see what all the fuss is about!
