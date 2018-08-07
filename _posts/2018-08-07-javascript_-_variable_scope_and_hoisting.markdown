@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript - Variable Scope and Hoisting"
-date:       2018-08-07 14:37:17 +0000
+date:       2018-08-07 10:37:17 -0400
 permalink:  javascript_-_variable_scope_and_hoisting
 ---
 
@@ -113,7 +113,7 @@ console.log(hero);                  //The Flash
 console.log(antiHero);              //Captain Cold
 ```
 
-You have two `let` variables that are declared as `antiHero`.  One is declared inside a block, while the other remains at the topf of the script.  When we run console.log outside of the block, the `let` variable's assignment at the top of the script is returned.  Now, when we run console.log on the block-level `let`, as we can see, it only has access to the block level assignment.  With `var`, there is something strickingly different about the assignment value.  it stays consistent with the block result!
+You have two `let` variables that are declared as `antiHero`.  One is declared inside a block, while the other remains at the top of the script.  When we run console.log outside of the block, the `let` variable's assignment at the top of the script is returned.  Now, when we run console.log on the block-level `let`, as we can see, it only has access to the block level assignment.  With `var`, there is something strickingly different about the assignment value.  it stays consistent with the block result!
 
 Inside the block, we can see that `var` gets change to "The Flash".  This assignment extends into the global scope, and maintains that same assignment value, even though, at the top of our script, ```var hero     = "Batman"```.  Var scope is global, therefore, it will maintain that block level scope all the way into the global scope of the script.
 
