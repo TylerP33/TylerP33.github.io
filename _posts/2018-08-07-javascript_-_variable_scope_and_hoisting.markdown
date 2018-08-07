@@ -7,7 +7,7 @@ permalink:  javascript_-_variable_scope_and_hoisting
 
 We encounter a ton of information throughout this program.  So much so, that even when you think you have covered all your tracks with good notes, concepts still manage to fall through the cracks.  A perfect example of this is trying to keep straight all the rules and scenarios for scope and hoisting within JavaScript.  Seeing that those two concepts play an integral part in JavaScript, I thought a blog review post would be a great idea!
 
-The definition of "hoisting" is JavaScript's default behavior of moving all declarations to the top of the current scope.  In JavaScript, we hav two possibilties of scope; we have the top of the current script or the top of the current function.  We call this local and global scope.  Here is a simple example of a hoisting within a script.
+The definition of "hoisting" is JavaScript's default behavior of moving all declarations to the top of the current scope.  In JavaScript, we have two possibilties of scope; we have the top of the current script or the top of the current function.  We call this local and global scope.  Here is a simple example of a hoisting within a script.
 
 
 ```
@@ -54,9 +54,9 @@ elem.innerHTML = x;                     // Display x in the element
 </html> 
 ```
 
-The `var x;` starts at the top, and x=5 is interpretated after.  The tricky question is, is `var x;` interpreted before x = 5 in the first script?  Yes!  That is because `var` declarations will be hoisted.  `let` and `const` declarations are "hoisted" as well, in that the scope indentifier will always reference that particular variable (not the assignment).  With that being said, there is a dramatic differnce between `var` declarations and the other two variable choices, `let` and `const`.    
+The `var x;` starts at the top, and x=5 is interpretated after.  The tricky question is, is `var x;` interpreted before x = 5 in the first script?  Yes!  That is because `var` declarations will be hoisted.  `let` and `const` declarations are "hoisted" as well, in that the scope indentifier will always reference that particular variable (not the assignment).  With that being said, there is a dramatic difference between `var` declarations and the other two variable choices, `let` and `const`.    
 
-This difference is in their initialisation. `var` and `function` are initialised with undefined, which does not cause an error, and it allows the variable expression to match the variable declaration at run-time.  `let` and `const` are will throw an ReferenceError when you try to access it.  These specific variable types only get initialised when a `let`/`const`/`class` statement is evaluated.  Everything before (above) is called the "temporal dead zone".  
+This difference is in their initialization. `var` and `function` are initialized with undefined, which does not cause an error, and it allows the variable expression to match the variable declaration at run-time.  `let` and `const` are will throw an ReferenceError when you try to access it.  These specific variable types only get initialized when a `let`/`const`/`class` statement is evaluated.  Everything before (above) is called the "temporal dead zone".  
 
 Here is a perfect example of the two:
 
