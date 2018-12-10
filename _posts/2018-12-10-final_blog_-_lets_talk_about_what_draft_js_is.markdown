@@ -23,7 +23,7 @@ Straight from the homepage itself!
 
 Draft.JS uses immutable objects to keep a constant "snapshot" of the built in `<EditorState />` component that you physically type into while working with Draft.JS.  That means the object isn't just tracking the text aspect of the editor.  It is tracking where the cursor last was, what kind of styling and indentation was used and what the ranges were for those specific styles, and even what type of media files are within the editor.  And those are just a few examples!  The immutable model that Draft.JS has is truly incredible.  When you start to work with it, it slowly keeps impressing you and when you realize it's full potential, you start to see the genius behind the whole setup.
 
-Let me show you a simple example of what that Object looks after it is converted into raw JSON (another part of the Draft.JS framework that is done by a build in method called `convertToRaw()`).
+Let me show you a simple example of what that Object looks after it is converted into raw JSON (another part of the Draft.JS framework that is done by a built in method called `convertToRaw()`).
 
 ```
 "{"blocks"=>[{"key"=>"5p965", "text"=>"blank check here - chxeck it out. Blank check it out. Blank check it out. Blank check it out! Blank check it out! ", "type"=>"unstyled", "depth"=>0, "inlineStyleRanges"=>[{"offset"=>0, "length"=>9, "style"=>"ITALIC"}, {"offset"=>0, "length"=>118, "style"=>"BOLD"}, {"offset"=>0, "length"=>118, "style"=>"CODE"}], "entityRanges"=>[], "data"=>{}}, {"key"=>"bpt2r", "text"=>"",
