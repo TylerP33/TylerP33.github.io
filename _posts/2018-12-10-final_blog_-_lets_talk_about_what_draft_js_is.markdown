@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Final Blog - Let's talk about what Draft.JS is"
-date:       2018-12-10 17:28:50 +0000
+date:       2018-12-10 12:28:51 -0500
 permalink:  final_blog_-_lets_talk_about_what_draft_js_is
 ---
 
